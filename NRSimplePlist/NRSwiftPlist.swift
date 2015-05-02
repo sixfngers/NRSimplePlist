@@ -7,7 +7,7 @@
 
 import UIKit
 
-func plistGet(key:String, forPlistNamed:String) -> AnyObject{
+func plistGet(key:String, forPlistNamed:String, bundle:NSBundle? = nil) -> AnyObject{
     
     var error:NSError?
     var formats: UnsafeMutablePointer<NSPropertyListFormat> = UnsafeMutablePointer()
@@ -15,8 +15,15 @@ func plistGet(key:String, forPlistNamed:String) -> AnyObject{
     var array:NSArray = NSArray()
     var tipo:AnyObject = ""
     
+    var validBundle:NSBundle
     
-    if let path:String = NSBundle.mainBundle().pathForResource(forPlistNamed, ofType: "plist"){
+    if let fileBundle = bundle {
+        validBundle = fileBundle
+    } else {
+        validBundle = NSBundle.mainBundle()
+    }
+    
+    if let path:String = validBundle.pathForResource(forPlistNamed, ofType: "plist"){
         
         if let plistData = NSData(contentsOfFile: path) {
             

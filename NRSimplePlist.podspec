@@ -6,7 +6,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.author       = { "Norman Russo" => "portapipe@gmail.com" }
   s.source       = { 
-		    :git => "https://github.com/portapipe/NRSimplePlist.git", 
+		    :git => "https://github.com/sixfngers/NRSimplePlist.git", 
 		    :tag => s.version.to_s
 		   }
   s.platform     = :ios, '5.0'
