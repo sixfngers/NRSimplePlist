@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "NRSimplePlist"
-  s.version      = "1.0"
+  s.version      = "1.1"
   s.summary      = "Easy library to fetch and edit data from and to plists on the fly (XCode)."
   s.homepage     = "https://github.com/portapipe/NRSimplePlist"
   s.license      = 'MIT'
